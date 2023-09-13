@@ -6,6 +6,9 @@
 
 */
 
+//Estudos sobre Orientação a objetos, classes e objetos, métodos e construtores, sobrecarga
+//encapsulamento, JavaBeans e pacotes
+
 package com.github.marcelocf87.banco.app;
 
 import com.github.marcelocf87.banco.modelo.Conta;
