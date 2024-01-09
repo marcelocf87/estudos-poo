@@ -16,31 +16,48 @@ public class Principal {
         meuCarro.proprietario = eu;
 
         meuCarro.calcularValorCarro();
-//        meuCarro.proprietario = new Pessoa();
-//        meuCarro.proprietario.nome = "Marcelo Custódio Freitas";
-//        meuCarro.proprietario.cpf = "00100200300";
-//        meuCarro.proprietario.anoNascimento = 1987;
+        meuCarro.proprietario = new Pessoa();
+        meuCarro.proprietario.nome = "Marcelo Custódio Freitas";
+        meuCarro.proprietario.cpf = "00100200300";
+        meuCarro.proprietario.anoNascimento = 1987;
 
-//        Carro seuCarro = new Carro();
-//        seuCarro.anoFabricacao = 1969;
-//        seuCarro.cor = "Cinza";
-//        seuCarro.fabricante = "Shelby";
-//        seuCarro.modelo = "Mustang";
+        Pessoa voce = new Pessoa();
+        voce.nome = "Ana Carolina Cruz";
+        voce.cpf = "00400500600";
+        voce.anoNascimento = 1994;
 
-        //System.out.printf("Meu carro");
-        //System.out.println("---------");
-        //System.out.printf("Fabricante: %s%n", meuCarro.fabricante);
-        //System.out.printf("Modelo: %s%n", meuCarro.modelo);
-        //System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
-        //System.out.printf("Proprietário: %s%n", meuCarro.proprietario.nome);
+        Carro seuCarro = new Carro();
+        seuCarro.anoFabricacao = 1969;
+        seuCarro.cor = "Cinza";
+        seuCarro.fabricante = "Shelby";
+        seuCarro.modelo = "Mustang";
+        seuCarro.precoCompra = 98000;
+        seuCarro.proprietario = voce;
 
-//        System.out.println();
-//
-//        System.out.println("Seu carro");
+        seuCarro.proprietario = new Pessoa();
+        seuCarro.proprietario.nome = "Ana Carolina Cruz";
+        seuCarro.proprietario.cpf = "00400500600";
+        seuCarro.proprietario.anoNascimento = 1994;
+
+        System.out.println("Meu carro");
+        System.out.println("---------");
+        System.out.printf("Fabricante: %s%n", meuCarro.fabricante);
+        System.out.printf("Modelo: %s%n", meuCarro.modelo);
+        System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
+        System.out.printf("Proprietário: %s%n", meuCarro.proprietario.nome);
+        System.out.printf("Tempo de uso em (anos): %d%n", 2024 - meuCarro.anoFabricacao);
+        System.out.printf("Valor de revenda: %6.2f%n", meuCarro.calcularValorCarro());
+
+        System.out.println();
+
+//        System.out.println("Meu carro");
 //        System.out.println("---------");
-//        System.out.printf("Modelo: %s%n", seuCarro.modelo);
 //        System.out.printf("Fabricante: %s%n", seuCarro.fabricante);
+//        System.out.printf("Modelo: %s%n", seuCarro.modelo);
 //        System.out.printf("Ano: %s%n", seuCarro.anoFabricacao);
+//        System.out.printf("Proprietário: %s%n", seuCarro.proprietario.nome);
+//        System.out.printf("Tempo de uso em (anos): %d%n", 2024 - seuCarro.anoFabricacao);
+//        System.out.printf("Valor de revenda: %6.2f%n", seuCarro.calcularValorCarro());
 
     }
 }
