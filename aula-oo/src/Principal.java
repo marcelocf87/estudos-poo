@@ -33,6 +33,9 @@ public class Principal {
         seuCarro.precoCompra = 68000;
         seuCarro.proprietario = voce;
 
+        double ipva = meuCarro.calcularIpva();
+        System.out.println(ipva);
+
         seuCarro.proprietario = new Pessoa();
         seuCarro.proprietario.nome = "Ana Carolina Cruz";
         seuCarro.proprietario.cpf = "00400500600";
@@ -40,8 +43,8 @@ public class Principal {
 
         meuCarro.imprimirResumo();
         meuCarro.imprimirResumoDepreciacao();
-        seuCarro.imprimirResumo();
-        seuCarro.imprimirResumoDepreciacao();
+//        seuCarro.imprimirResumo();
+//        seuCarro.imprimirResumoDepreciacao();
 
 //        System.out.println("Meu carro");
 //        System.out.println("---------");
