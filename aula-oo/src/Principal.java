@@ -15,7 +15,6 @@ public class Principal {
         meuCarro.precoCompra = 55000;
         meuCarro.proprietario = eu;
 
-        meuCarro.calcularValorCarro();
         meuCarro.proprietario = new Pessoa();
         meuCarro.proprietario.nome = "Marcelo Custódio Freitas";
         meuCarro.proprietario.cpf = "00100200300";
@@ -27,11 +26,11 @@ public class Principal {
         voce.anoNascimento = 1994;
 
         Carro seuCarro = new Carro();
-        seuCarro.anoFabricacao = 1969;
-        seuCarro.cor = "Cinza";
-        seuCarro.fabricante = "Shelby";
-        seuCarro.modelo = "Mustang";
-        seuCarro.precoCompra = 98000;
+        seuCarro.anoFabricacao = 2020;
+        seuCarro.cor = "Branco";
+        seuCarro.fabricante = "Hyundai";
+        seuCarro.modelo = "HB20";
+        seuCarro.precoCompra = 68000;
         seuCarro.proprietario = voce;
 
         seuCarro.proprietario = new Pessoa();
@@ -39,16 +38,19 @@ public class Principal {
         seuCarro.proprietario.cpf = "00400500600";
         seuCarro.proprietario.anoNascimento = 1994;
 
-        System.out.println("Meu carro");
-        System.out.println("---------");
-        System.out.printf("Fabricante: %s%n", meuCarro.fabricante);
-        System.out.printf("Modelo: %s%n", meuCarro.modelo);
-        System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
-        System.out.printf("Proprietário: %s%n", meuCarro.proprietario.nome);
-        System.out.printf("Tempo de uso em (anos): %d%n", 2024 - meuCarro.anoFabricacao);
-        System.out.printf("Valor de revenda: %6.2f%n", meuCarro.calcularValorCarro());
+        meuCarro.imprimirResumo();
+        meuCarro.imprimirResumoDepreciacao();
+        seuCarro.imprimirResumo();
+        seuCarro.imprimirResumoDepreciacao();
 
-        System.out.println();
+//        System.out.println("Meu carro");
+//        System.out.println("---------");
+//        System.out.printf("Fabricante: %s%n", meuCarro.fabricante);
+//        System.out.printf("Modelo: %s%n", meuCarro.modelo);
+//        System.out.printf("Ano: %s%n", meuCarro.anoFabricacao);
+//        System.out.printf("Proprietário: %s%n", meuCarro.proprietario.nome);
+//
+//        System.out.println();
 
 //        System.out.println("Meu carro");
 //        System.out.println("---------");
