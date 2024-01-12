@@ -3,11 +3,11 @@ public class Principal {
     public static void main(String[] args) {
         Paciente paciente = new Paciente();
         paciente.altura = 1.82;
-        paciente.peso = 175;
+        paciente.peso = 75;
 
         IndiceMassaCorporal imc = paciente.calcularIndiceMassaCorporal();
 
-        if (imc.resultado >= 30) {
+        if (imc.estaComObesidade()) {
             System.out.printf("Paciente com altura de %.2f e peso de %.2f " +
                     "está com obesidade%n", imc.altura, imc.peso);
         }
