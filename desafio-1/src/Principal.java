@@ -1,15 +1,16 @@
 public class Principal {
 
     public static void main(String[] args) {
-        FolhaPagamento funcionario = new FolhaPagamento();
-        funcionario.horasTrabalhadas = 40;
-        funcionario.horasExtrasTrabalhadas = 10;
-        funcionario.valorHoraNormal = 20;
-        funcionario.valorHoraExtra = 30;
 
-        double folha = funcionario.calcularFolhaPagamento();
+        FolhaPagamento folhaPagamento = new FolhaPagamento();
+        double horasTrabalhadas = 40;
+        double horasExtrasTrabalhadas = 10;
+        double valorHoraNormal = 20;
+        double valorHoraExtra = 30;
 
-        System.out.printf("Folha de pagamento: %.2f%n", folha);
+        double resumoFolha = folhaPagamento.calcularFolhaPagamento(horasTrabalhadas, horasExtrasTrabalhadas, valorHoraNormal, valorHoraExtra);
+
+        System.out.printf("Folha de pagamento: %.2f%n", resumoFolha);
 
     }
 }
