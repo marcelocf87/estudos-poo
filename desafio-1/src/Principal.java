@@ -7,7 +7,7 @@ public class Principal {
         funcionario.valorHoraNormal = 20;
         funcionario.valorHoraExtra = 30;
 
-        double folha = funcionario.calculaFolhaPagamento();
+        double folha = funcionario.calcularFolhaPagamento();
 
         System.out.printf("Folha de pagamento: %.2f%n", folha);
 
