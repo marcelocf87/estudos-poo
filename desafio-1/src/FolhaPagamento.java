@@ -1,14 +1,11 @@
 public class FolhaPagamento {
+    double calcularFolhaPagamento(double horasTrabalhadas, double horasExtrasTrabalhadas,
+                                  double valorHoraNormal, double valorHoraExtra) {
 
-    double horasTrabalhadas;
-    double horasExtrasTrabalhadas;
-    int valorHoraNormal;
-    int valorHoraExtra;
+        double totalHorasTrabalhadas = horasTrabalhadas * valorHoraNormal;
+        double totalHorasExtras = horasExtrasTrabalhadas * valorHoraExtra;
 
-    double calcularFolhaPagamento() {
-        double folhaCalculada = (horasTrabalhadas * valorHoraNormal) + (horasExtrasTrabalhadas * valorHoraExtra);
-
-        return folhaCalculada;
+        return totalHorasExtras + totalHorasTrabalhadas;
     }
 
 }
