@@ -10,14 +10,10 @@ public class Principal {
         contratrabalho.valorHoraNormal = 20;
         contratrabalho.valorHoraExtra = 30;
 
-        FolhaPagamento folhaPagamentogamento = new FolhaPagamento();
+        FolhaPagamento folhaPagamento = new FolhaPagamento();
 
-        double salarioDevido = folhaPagamentogamento.calcularFolhaPagamento(40, 10,
-                contratrabalho);
+        Holerite holerite = folhaPagamento.calcularSalario(40, 10, contratrabalho);
 
-        System.out.print("Funcionario: ");
-        System.out.println(funcionario.nome);
-        System.out.printf("Salário devido: $ %.2f%n", salarioDevido);
-
+        holerite.imprimir();
     }
 }

@@ -4,7 +4,7 @@ public class Funcionario {
    int quantidadeFilhos;
 
    boolean validarFilhos() {
-      return quantidadeFilhos > 0;
+      return quantidadeFilhos > 1;
 
    }
 
