@@ -3,7 +3,7 @@ public class Principal {
     public static void main(String[] args) {
         Funcionario funcionario = new Funcionario();
         funcionario.nome = "Marcelo Custódio Freitas";
-        funcionario.quantidadeFilhos = 2;
+        funcionario.quantidadeFilhos = 1;
 
         ContratoTrabalho contratrabalho = new ContratoTrabalho();
         contratrabalho.funcionario = funcionario;
