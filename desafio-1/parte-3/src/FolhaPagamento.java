@@ -1,17 +1,18 @@
 public class FolhaPagamento {
 
-    double calcularSalario(double horasNormais, double horasExtras, ContratoTrabalho contrato) {
+    Holerite calcularSalario(double horasNormais, double horasExtras, ContratoTrabalho contrato) {
+        Holerite holerite = new Holerite();
+        holerite.funcionario = contrato.funcionario;
+        holerite.valorTotalHorasNormais = horasNormais * contrato.valorHoraNormal;
+        holerite.valorTotalHorasExtras = horasExtras * contrato.valorHoraExtra;
 
-        double totalHorasNormais = horasNormais * contrato.valorHoraNormal;
-        double totalHorasExtras = horasExtras * contrato.valorHoraExtra;
-
-        double valorTotal = totalHorasNormais + totalHorasExtras;
+        double subTotal = holerite.valorTotalHorasNormais + holerite.valorTotalHorasExtras;
 
         if (contrato.adicionalFilhos()){
-            valorTotal *= 1.10;
+            holerite.valorAdicionalFilhos = subTotal * 0.10;
         }
 
-        return valorTotal;
+        return holerite;
 
     }
 }
