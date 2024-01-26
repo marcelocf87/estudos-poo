@@ -23,3 +23,78 @@ O conjunto de classes solicitado neste desafio um sistema simples de folha de pa
    - O método `imprimir` exibe as informações do holerite na saída padrão, incluindo o nome do funcionário, valores das horas normais, horas extras, adicional para filhos e o valor total.
 
 Ao criar instâncias dessas classes e chamar o método `calcularSalario` da classe `FolhaPagamento`, você pode simular o cálculo de salários e obter um holerite com os detalhes correspondentes. O método `imprimir` da classe `Holerite` facilita a visualização desses detalhes.
+
+Vamos explorar a lógica detalhada de cada classe e método no código fornecido:
+
+### 1. Classe `FolhaPagamento`:
+
+#### Método `calcularSalario`:
+- **Parâmetros:**
+  - `horasNormais`: Número de horas normais trabalhadas.
+  - `horasExtras`: Número de horas extras trabalhadas.
+  - `contrato`: Objeto do tipo `ContratoTrabalho` que contém informações sobre o contrato de trabalho.
+
+- **Lógica:**
+  1. Cria uma instância da classe `Holerite` para armazenar os detalhes do salário.
+  2. Atribui o funcionário do contrato ao holerite.
+  3. Calcula o valor total para as horas normais multiplicando o número de horas normais pelo valor da hora normal no contrato.
+  4. Calcula o valor total para as horas extras multiplicando o número de horas extras pelo valor da hora extra no contrato.
+  5. Calcula um subtotal somando os valores das horas normais e extras.
+  6. Se o contrato de trabalho indica que o funcionário tem filhos (método `possuiAdicionalParaFilhos()` retorna `true`), calcula e atribui um adicional de 10% do subtotal para filhos ao holerite.
+  7. Retorna o holerite com os valores calculados.
+
+### 2. Classe `ContratoTrabalho`:
+
+- **Atributos:**
+  - `funcionario`: Objeto do tipo `Funcionario` associado ao contrato.
+  - `valorHoraNormal`: Valor da hora normal no contrato.
+  - `valorHoraExtra`: Valor da hora extra no contrato.
+
+- **Método `possuiAdicionalParaFilhos`:**
+  - Delega a decisão de se há ou não adicional para filhos ao método `validarFilhos` da classe `Funcionario`.
+  - Retorna `true` se o funcionário tiver pelo menos um filho, caso contrário, retorna `false`.
+
+### 3. Classe `Funcionario`:
+
+- **Atributos:**
+  - `nome`: Nome do funcionário.
+  - `quantidadeFilhos`: Número de filhos do funcionário.
+
+- **Método `validarFilhos`:**
+  - Retorna `true` se o funcionário tiver pelo menos um filho.
+
+### 4. Classe `Holerite`:
+
+- **Atributos:**
+  - `funcionario`: Objeto do tipo `Funcionario` associado ao holerite.
+  - `valorTotalHorasNormais`: Valor total das horas normais no holerite.
+  - `valorToralHorasExtras`: Valor total das horas extras no holerite.
+  - `valorAdicionalParaFilhos`: Valor adicional para filhos no holerite.
+
+- **Método `calcularValorTotal`:**
+  - Retorna a soma dos valores de horas normais, horas extras e adicional para filhos no holerite.
+
+- **Método `imprimir`:**
+  - Imprime na saída padrão as informações do holerite, incluindo o nome do funcionário, valores das horas normais, horas extras, adicional para filhos e o valor total.
+
+### Exemplo de Uso:
+
+```java
+// Criar instâncias
+Funcionario funcionario = new Funcionario();
+funcionario.nome = "João";
+funcionario.quantidadeFilhos = 2;
+
+ContratoTrabalho contrato = new ContratoTrabalho();
+contrato.funcionario = funcionario;
+contrato.valorHoraNormal = 10.0;
+contrato.valorHoraExtra = 15.0;
+
+FolhaPagamento folha = new FolhaPagamento();
+
+// Calcular salário e obter holerite
+Holerite holerite = folha.calcularSalario(40.0, 5.0, contrato);
+
+// Imprimir holerite
+holerite.imprimir();
+```
