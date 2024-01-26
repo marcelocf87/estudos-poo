@@ -1,4 +1,4 @@
-O conjunto de classes fornecido parece representar um sistema simples de folha de pagamento. Vou explicar a lógica do código:
+O conjunto de classes solicitado neste desafio um sistema simples de folha de pagamento. Vou explicar a lógica do código:
 
 1. **FolhaPagamento:**
    - A classe `FolhaPagamento` possui um método chamado `calcularSalario`, que recebe as horas normais, horas extras e um objeto `ContratoTrabalho`.
