@@ -6,8 +6,8 @@ public class Principal {
         double precoCompraFornecedor = 140;
 
         ServicoDePrecificacao servicoDePrecificacao = new ServicoDePrecificacao();
-        servicoDePrecificacao.calcularPreco(precoCompraFornecedor);
+        double precoVenda = servicoDePrecificacao.calcularPreco(precoCompraFornecedor);
 
-        System.out.printf("Preço: %.2f%n", precoCompraFornecedor);
+        System.out.printf("Preço: %.2f%n", precoVenda);
     }
 }
