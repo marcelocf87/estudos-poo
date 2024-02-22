@@ -1,7 +1,7 @@
 public class ServicoDePrecificacao {
 
-    double calcularPreco(double precoCusto) {
-        return precoCusto * 1.20;
+    void calcularPreco(double precoCusto) {
+        precoCusto = precoCusto * 1.20;
 
     }
 }
