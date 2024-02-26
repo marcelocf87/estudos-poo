@@ -10,6 +10,7 @@ public class Principal {
         turmaB.alunos[0].nome = "Cecília";
         turmaB.alunos[0].idade = 2;
 
+        //Outra forma de fazer
         Aluno aluno1 = new Aluno();
         aluno1.nome = "Artur";
         aluno1.idade = 4;
